@@ -54,19 +54,30 @@
 %\signatureofdeclaration{signature.pdf} % 用于添加扫描版签字后的原创新声明（使用时取消注释本行，并注释掉上一行）
 % 中文摘要
 \begin{chineseabstract}
+<<<<<<< HEAD
     数据的爆炸式增长既要求研究人员致力于节约存储容量的研究，也要求人们投入更多的精力关注敏感数据的安全存储当中。密文去重技术是解决这两个方面问题的重要方法。
+=======
+    数据的爆炸式增长既要求研究人员致力于节约存储容量的研究，也要求人们投入更多的精力关注敏感数据的安全存储当中。此外，以往的工作鲜有在密文去重系统中引入高效的、具备推荐功能的密文关键词检索技术。不仅如此，现有的密文去重系统大多只针对一服务端多客户端的模型进行设计，并不能适配在当前流行的、具有去中心化和容灾功能的云服务器-边缘服务器协同架构上。所以，本论文阐述了一个兼容密文关键词检索的、适配云边协同架构的、高效且安全的密文去重系统。具体贡献如下：
+>>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
     首先，对\acrshort{CAONT}技术进行改造并提出了兼容密钥更新的安全高效密文去重方法，其中有两种数据加密方式：基础加密方案和增强加密方案。基础加密方案的安全性相对薄弱但是加密效率更好，增强加密方案安全性相对增强但是加密效率稍低。此外，融合属性基加密和密钥回归两种现有的密码学原语而达到安全高效的密钥更新的目标。
 
     其次，本系统没有采用现有的密文关键词检索技术而设计一种支持密态关联分析和推荐的关键词检索方式。在服务上以关联值明文存储的方式虽然透露了部分敏感信息，但是服务器目前无法从这些敏感信息恢复出任何有价值的信息。这种明文存储关联值能够运行服务器动态更新关联信息，启发式地影响后来用户的检索行为。
 
+<<<<<<< HEAD
     最后，本文不仅详细地阐述整个系统的底层设计和实现，还用大量的实验证实了本系统的存储开销低、上传和下载速度快以及响应检索时间短的优势。
+=======
+    再者，本论文详细讲述了系统底层精巧设计：密文去重系统对云边协同架构的微调和适配，即云服务器进行数据块级去重而边缘服务器进行文件级去重；密文关键词技术对密文去重系统的适配和云边协同架构的适配，即建立密文文件和密文关键词的对应关系并由云服务器收集所有边缘服务器的关联信息。
+
+    最后，本论文用大量的实验证实了本系统的存储开销低、上传和下载速度快以及响应检索时间短的优势。
+>>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
     \chinesekeyword{密文去重，关键词检索，云边协同} % 中文关键词
 \end{chineseabstract}
 % 英文摘要
 \begin{englishabstract}
 
+<<<<<<< HEAD
     The explosion of data requires both researchers to focus on conserving storage capacity and more attention to the secure storage of sensitive data. Encrypted deduplication technology is an important way to solve the two problems.
 
     Firstly, the CAONT technology is modified and a secure and efficient ciphertext deduplication method compatible with key update is proposed, in which there are two data encryption methods: basic encryption scheme and enhanced encryption scheme. The security of the basic encryption scheme is relatively weak but the encryption efficiency is better, and the security of the enhanced encryption scheme is relatively enhanced but the encryption efficiency is slightly lower. In addition, the goal of secure and efficient key update is achieved by fusing two existing cryptographic primitives, attribute-based encryption and key regression.
@@ -74,6 +85,17 @@
     Secondly, this system does not use the existing ciphertext keyword search technology to design a keyword search method that supports secret association analysis and recommendation. Although some sensitive information is disclosed by storing the associated values in clear text on the server, the server cannot recover any valuable information from these sensitive information at present. This plaintext of correlation value can run the server to dynamically update the correlation information, heuristically influencing the retrieval behavior of subsequent users.
 
     Finally, this thesis not only elaborates on the underlying design and implementation of the entire system, but also uses a large number of experiments to confirm the advantages of low storage overhead, fast upload and download speed, and short response retrieval time of this system.
+=======
+    The explosion of data requires both researchers to focus on conserving storage capacity and more attention to the secure storage of sensitive data. In addition, the previous works rarely introduce efficient and recommended ciphertext keyword retrieval technology into the ciphertext deduplication system. Not only that, most of the existing ciphertext deduplication systems are only designed for the model of one server and multiple clients, and cannot be adapted to the current popular cloud server-edge server collaborative architecture with decentralization and disaster recovery. Therefore, this thesis describes an efficient and secure ciphertext deduplication system that is compatible with ciphertext keyword retrieval and adapts to the cloud-edge collaborative architecture. The specific contributions are as follows:
+
+    Firstly, the CAONT technology is modified and a secure and efficient ciphertext deduplication method compatible with key update is proposed, in which there are two data encryption methods: basic encryption scheme and enhanced encryption scheme. The security of the basic encryption scheme is relatively weak but the encryption efficiency is better, and the security of the enhanced encryption scheme is relatively enhanced but the encryption efficiency is slightly lower. In addition, the goal of secure and efficient key update is achieved by fusing two existing cryptographic primitives, attribute-based encryption and key regression.
+
+    Secondly, this system does not use the existing ciphertext keyword search technology to design a keyword search method that supports secret association analysis and recommendation. Although some sensitive information is disclosed by storing the associated values in clear text on the server, the server cannot recover any valuable information from these sensitive information at present. This plaintext of correlation value can run the server to dynamically update the correlation information, heuristically influencing the retrieval behavior of subsequent users.
+
+    Thirdly, this thesis describes in detail the exquisite design of the bottom layer of the system: the fine-tuning and adaptation of the ciphertext deduplication system to the cloud-edge collaborative architecture, that is, the cloud server performs data block-level deduplication and the edge server performs file-level deduplication; the ciphertext keyword search technology's adaptation to the ciphertext deduplication system and the cloud-edge collaborative architecture, that is, to establish the corresponding relationship between ciphertext files and ciphertext keywords, and the cloud server collects the association information of all edge servers.
+
+    Finally, this thesis uses a large number of experiments to confirm the advantages of low storage overhead, fast upload and download speed, and short response retrieval time of this system.
+>>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
 
     \englishkeyword{Encrypted deduplication, Keyword search, Cloud-Edge collaboration} % 英文关键词
@@ -111,6 +133,7 @@
         \label{2022年十大数据泄漏事件}
         \begin{tabular}{|c|c|}
             \hline
+<<<<<<< HEAD
             \textbf{公司名称}             & \textbf{波及人数（万人）} \\
             \hline
             Cash App Investing            & 820                       \\
@@ -132,6 +155,29 @@
             Flagstar Bank                 & 154                       \\
             \hline
             Baptist Medical Center        & 124                       \\
+=======
+            \textbf{公司名称}                 & \textbf{波及人数（万人）} \\
+            \hline
+            Cash App Investing            & 820               \\
+            \hline
+            Beetle Eye                    & 700               \\
+            \hline
+            FlexBooker                    & 375               \\
+            \hline
+            Elephant Insurance Services   & 276               \\
+            \hline
+            Lakeview Loan Servicing       & 257               \\
+            \hline
+            Horizon Actuarial Services    & 229               \\
+            \hline
+            Shields Health Care Group     & 200               \\
+            \hline
+            Texas Department of Insurance & 180               \\
+            \hline
+            Flagstar Bank                 & 154               \\
+            \hline
+            Baptist Medical Center        & 124               \\
+>>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
             \hline
         \end{tabular}
     \end{center}
@@ -193,9 +239,9 @@ Song等人\citing{song2000practical}在对称密码体制下引入可搜索加�
 
 针对文件重新加密，即密钥更新的问题，以下两种简单的方式常常被使用：\ding{172}一个对称密钥被用户重新生成，用户使用这个密钥对文件进行重新加密。用户首先从云服务器上下载原始密文，并采用原始密钥解密，之后用新的文件密钥对文件重新加密，并将新密文上传至云服务器。\ding{173}密钥服务器更换签名密钥。当一个用户需要进行重加密时，便请求密钥服务器更新签名密钥，即用户重新将文件的哈希值盲化，通过与密钥服务器交互获取一个新的文件密钥。用户采用新密钥将文件重加密之后，将新密文上传至服务器。
 
-虽然以上两种方法实现过程相对简单，但是也存在很多缺点：数据去重效能不高，新上传的密文和旧密文不相同且独立，难以实现去重，所以相同的明文会在服务器存放多个密文的副本，严重浪费存储资源；不能保护用户数据机密性，即旧的密文任然存在于云服务器中，拥有某一个历史密文数据版本的密钥依旧可以获取明文信息；通信开销大，需要将整个新密文上传至云服务器，占用了极大的网络带宽和计算资源。
+虽然以上两种方法实现过程相对简单，但是也存在很多缺点：数据去重效能不高，新上传的密文和旧密文不相同且独立，难以实现去重，所以相同的明文会在服务器存放多个密文的副本，严重浪费存储资源；不能保护用户数据机密性，即旧的密文仍然存在于云服务器中，拥有某一个历史密文数据版本的密钥依旧可以获取明文信息；通信开销大，需要将整个新密文上传至云服务器，占用了极大的网络带宽和计算资源。
 
-（2）密文关键词检索时往往不具备关联分析与推荐的功能。以往的工作很少能考虑到百万级数据的密文检索效率瓶颈问题，即包含同一个密文关键词的文件在分布式系统中有成千上万个。即使建立了密文关键词和文件名的倒排索引，数以万计的文件数量在被执行检索时也会占用极大的CPU资源和内存空间。此外，将如此数量的文件全部传输给用户，供用户去筛选和抉择自己想要的文件不仅占用了很大的网络带宽，还给用户带来了极差的体验。所以，在密文检索的功能设计中，往往要考虑关联分析和推荐的功能。也就是说，云服务能够智能化地对密文关键词和关键词、关键词和文件之间关联进行分析并将用户最有可能想要检索的若干文件或关键词筛选出来推荐给用户。
+（2）密文关键词检索时往往不具备关联分析与推荐的功能。以往的工作很少能考虑到百万级数据的密文检索效率瓶颈问题，即包含同一个密文关键词的文件在分布式系统中有成千上万个。即使建立了密文关键词和文件名的倒排索引，数以万计的文件数量在被执行检索时也会占用极大的CPU资源和内存空间。此外，将如此数量的文件全部传输给用户让其去筛选和抉择自己想要的文件的方式不仅占用了很大的网络带宽，还给用户带来了极差的体验。所以，在密文检索的功能设计中，往往要考虑关联分析和推荐的功能。也就是说，云服务能够智能化地对密文关键词和关键词、关键词和文件之间关联进行分析并将用户最有可能想要检索的若干文件或关键词筛选出来推荐给用户。
 
 （3）当前的密文去重系统不具备边缘服务器和云服务器架构的适配性。边缘计算是指使用用户或者数据源附近的物理机进行计算，这样能降低延迟和节约带宽，所以近年来非常受关注\citing{yu2017survey}。此外，边缘计算和中心云计算机并行计算的方式加速数据计算速度和提高数据备份的容灾性\citing{cao2020overview}。然而，当前无论是密文关键词检索功能还是密文去重系统都不具备“云边协同”服务架构的适配性。也就是说，当前的密文检索功能或密文去重系统都是用在中心化的云服务器上的，在云服务器和边缘服务器的架构上还不能很好地被应用。其中，密文检索功能在“云边协同”架构上应用需要考虑的是在安全和低延迟的前提下对多个边缘服务器下的密文关键词和文件进行关联性分析；密文去重系统在“云边协同”上的架构需要考虑整体系统的安全性、功能性以及存储效能。
 
@@ -394,9 +440,9 @@ MLE算法主要分类如下：
 本系统的安全性是同时建立在两个对称加密密钥上的：每一个文件的文件级密钥（简称文件密钥）和每一个数据块的MLE密钥（简称MLE密钥）。在密钥更新期间，系统只需要更新密文密钥而所有数据块的MLE密钥保持不变。本论文认为这种重新加密方案实现了安全目标，同时保持了数据去重的高效性，并允许在权限撤销中进行轻量级重新加密。
 
 \subsection{基于CAONT的数据加密和密钥更新技术}\label{基于CANOT的数据加密和密钥更新技术}
-本论文提出了两种加密方案：基本加密方案和增强加密方案。基本加密方案更高效但容易遭受MLE密钥泄漏的攻击；增加加密方案阻止了MLE密钥的泄漏同时也引入了额外的加密步骤。在阐述两种加密方案之前，先简单叙述CANOT技术。
+本论文提出了两种加密方案：基本加密方案和增强加密方案。基本加密方案更高效但容易遭受MLE密钥泄漏的攻击；增强加密方案阻止了MLE密钥的泄漏同时也引入了额外的加密步骤。在阐述两种加密方案之前，先简单叙述CANOT技术。
 
-\textbf{CAONT技术}
+\textbf{（1）CAONT技术}
 
 本系统是采用CAONT（Convergent All-or-Nothing Transform）技术作为基础加密原语的，CAONT技术可以视为\acrshort{AONT}（All-or-nothing）技术的变种。为了整篇论文逻辑的完整性，本章节会简单交代AONT技术的要点，然后再阐述CAONT技术的创新点，最后总结本系统基于CAONT原语的原因。
 
@@ -406,7 +452,7 @@ CAONT\citing{li2015cdstore}技术和以上ANOT技术具有相同的加解密逻�
 
 AONT是一种未知的随机加密模式，它将消息转换为称为密文数据包，其属性是：在不知道整个包的情况下，在计算上基本不可能还原成原始消息。原生的AONT设计阻止了数据去重，因为它的转换将随机密钥作为构建密文数据包的输入。而CAONT技术用确定性消息派生密钥替换随机密钥来构建密文数据包，这确保了相同明文总能加密生成相同的密文包。
 
-\textbf{基础加密方案}\label{caont-basic}
+\textbf{（2）基础加密方案}\label{caont-basic}
 
 基础加密方案运用CAONT技术产生两个密文部分：修剪包（trimmed package）和存根（stub）。实际上，本论文对CAONT方案做了两个地方修改。第一个修改是数据加密密钥方面：从用哈希函数提取明文信息的哈希值作为加密密钥的方式转变成由密钥管理器生成MLE密钥的方式。这个思路借鉴了DupLESS\citing{keelveedhi2013dupless}系统，其中密钥管理器生成密钥的方式有两点好处：\ding{172}密钥管理器采用盲签名机制协助客户端基于明文哈希值生成MLE密钥，规避离线暴力字典攻击；\ding{173}密钥管理器执行严格的客户端请求MLE密钥生成速度，有效抵抗在线暴力字典攻击。然而，第一个修改会使得系统不能使用哈希值去验证数据的完整性。因此，本论文又增加了第二个修改点：在原始明文数据$M$中追加一个公知的、固定大小的数据$c$，称为“金丝雀”。在明文数据块加密再解密之后，可以校验“金丝雀”$c$是否发生改变并以此来验证数据的完整性。
 % \begin{figure}[htbp]  
@@ -429,7 +475,7 @@ AONT是一种未知的随机加密模式，它将消息转换为称为密文数�
 
 基础加密方案很容易受到MLE密钥泄漏攻击。具体来说，敌手在攻破某一个客户端之后会监听由密钥管理器生成的MLE密钥（即上文中的$K_M$）。如果一个MLE密钥泄漏，那么敌手很容易能发现伪随机掩码（即上文中的$G(K_M)$）并用该掩码和密文中修剪包做异或（XOR）操作获取数据块中大部分内容。
 
-\textbf{增强加密方案}\label{caont-enhanced}
+\textbf{（3）增强加密方案}\label{caont-enhanced}
 
 由于基础加密方案存在MLE密钥泄漏攻击问题，所以本论文进一步设计了安全性增强的加密方案，其中方框中内容代表数据（包括明文或密文）或者组件，圆圈和椭圆中符号代表运算符，箭头代表运算流程方向。增强加密方案的工作流程中首先运用密钥管理服务器的MLE密钥生成MLE密文，再将CAONT技术运用到整个MLE密文上。其底层原理在于因为MLE密文被CAONT保护着，即使敌手攻破了MLE密钥，仍不能恢复原始的明文数据块。
 % \begin{figure}[htbp]  
@@ -455,7 +501,7 @@ AONT是一种未知的随机加密模式，它将消息转换为称为密文数�
 \subsection{基于相似性密钥生成技术}
 \ref{基于CANOT的数据加密和密钥更新技术}章节交代了数据块加密和密钥更新的详细流程，然而，若只将外包数据切分成若干数据块并对每一个数据块进行如上的加密操作存在很明显的性能瓶颈：密钥管理器辅助生成MLE密钥造成极大的系统负载。
 
-本论文的实验研究发现，密钥管理器辅助生成MLE密钥必须为每个数据块执行RSA盲签名算法（见\ref{RSA盲签名}，一个RSA盲签名算法包括盲化、签名和去盲化）\citing{keelveedhi2013dupless}，造成极大系统负载。在千兆网环境下，为一个8KB的数据块生成MLE密钥需要时间1125.3$\upmu$s，其中盲化用时46.3$\upmu$s，签名用时537.2$\upmu$s，去盲化用时246.9$\upmu$s，密钥传输用时294.9$\upmu$s。换句话来说，数据吞吐量是8KB / 1125.3$\upmu$s $\approx$ 6.9MB/s，远低于千兆网络的传输速率（1Gb/s$\approx$128MB/s）。导致该瓶颈的主要原因是RSA盲签名，因为盲化、签名和去盲化操作占了密钥生成的总延迟的73.8\%，见图\ref{服务器辅助生成MLE密钥各步骤占比}。
+本论文的实验研究发现，密钥管理器辅助生成MLE密钥必须为每个数据块执行RSA盲签名算法（见\ref{RSA盲签名}，一个RSA盲签名算法包括盲化、签名和去盲化）\citing{keelveedhi2013dupless}，造成极大系统负载。在千兆局域网（1Gb/s）且每台机器都都配备了一个24核2.40GHz Intel E5-2620的CPU、20TB的硬盘和32GB内存条，并安装了64位Ubuntu 20.04.1 LTS的操作系统的实验环境下复现RSA盲签名算法，为一个8KB的数据块生成MLE密钥需要时间1125.3$\upmu$s，其中盲化用时46.3$\upmu$s，签名用时537.2$\upmu$s，去盲化用时246.9$\upmu$s，密钥传输用时294.9$\upmu$s。换句话来说，数据吞吐量是8KB / 1125.3$\upmu$s $\approx$ 6.9MB/s，远低于千兆网络的传输速率（1Gb/s$\approx$128MB/s）。导致该瓶颈的主要原因是RSA盲签名，因为盲化、签名和去盲化操作占了密钥生成的总延迟的73.8\%，见图\ref{服务器辅助生成MLE密钥各步骤占比}。
 
 \begin{figure}[htbp]
     \centering
@@ -710,6 +756,7 @@ AONT是一种未知的随机加密模式，它将消息转换为称为密文数�
 在适配“云边协同”架构方面，在基础密文检索方案（见\ref{基础密文检索方案}）中，交代了云服务作为密文检索流程中的中间人地位：对其他边缘服务下文件关联性咨询都是由云服务发起的。当用户检索到目标文件并需要下载该文件时，倘若该文件来源于其他边缘服务，则云服务向该边缘服务索要文件的元数据信息表和存根部分，并从云服务后台存储恢复文件的修改包部分一起发送给客户端所在的边缘服务器，再由边缘服务器发送给客户端（见\ref{适配“云边协同”架构}）。
 
 在适配密文去重技术方面，主要是检索功能和权限校验的适配。具体来说，本论文的检索功能基于全局唯一的哈希函数生成的关键词哈希值，每一个合法用户都有权限去检索关键词关联文件，但是解密文件需要通过CP-ABE的策略控制，所以合法用户能检索到文件的唯一标识符，但是并不一定能解密甚至查看文件的内容。当某用户不能解密和查看文件内容时，如有必要，可以向文件主申请权限，文件主会更新控制访问的策略从而授权该用户。
+
 \section{安全性分析}
 本系统主要涉及两个核心技术点：兼容密钥更新的安全高效密文去重技术和兼容关联分析的密文检索技术，其中密文去重技术又可以细分为基于CAONT的密文去重技术和基于相似性的密钥生成技术两个部分。为了展示完整了安全性分析逻辑，本章节先论证基于CAONT的密文去重技术的机密性和完整性，再在此基础上论述基于相似性的生成密钥的安全性，最后阐述密文检索技术的安全性分析。
 
@@ -1068,6 +1115,7 @@ VM数据集的去重前后变化趋势见图\ref{存储开销3}。图\ref{存储
         \label{使用不同去重方法的物理数据和存根大小对比}
         \begin{tabular}{|c|c|c|c|}
             \hline
+<<<<<<< HEAD
             \multicolumn{2}{|c|}{\textbf{数据}}     & \textbf{基于数据块} & \textbf{基于数据片段}                   \\
             \hline\hline
             \multirow{2}{*}{FSL}                    & 修剪包              & 665.4GB                       & 899.2GB \\
@@ -1086,6 +1134,26 @@ VM数据集的去重前后变化趋势见图\ref{存储开销3}。图\ref{存储
             % & 关联信息 &  \multicolumn{2}{|c|}{8.5GB}\\
             \hline
             \multicolumn{2}{|c|}{\textbf{存储节约}} & 97.1\%              & 96.9\%                                  \\
+=======
+            \multicolumn{2}{|c|}{\textbf{数据}}   & \textbf{基于数据块} & \textbf{基于数据片段}                         \\
+            \hline\hline
+            \multirow{2}{*}{FSL}                & 修剪包            & 665.4GB                       & 899.2GB \\
+
+            \cline{2-4}
+                                                & 存根             & \multicolumn{2}{|c|}{386.4GB}           \\
+            % \cline{2-4}
+            % & 关联信息 &  \multicolumn{2}{|c|}{20.2GB}\\
+            \hline
+            \multicolumn{2}{|c|}{\textbf{存储节约}} & 98.2\%         & 97.8\%                                  \\
+            \hline\hline
+            \multirow{2}{*}{VM}                 & 修剪包            & 395.0GB                       & 453.9GB \\
+            \cline{2-4} %表示画一条2列-4列的横线
+                                                & 存根             & \multicolumn{2}{|c|}{461.3GB}           \\
+            % \cline{2-4}
+            % & 关联信息 &  \multicolumn{2}{|c|}{8.5GB}\\
+            \hline
+            \multicolumn{2}{|c|}{\textbf{存储节约}} & 97.1\%         & 96.9\%                                  \\
+>>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
             \hline
         \end{tabular}
     \end{center}
