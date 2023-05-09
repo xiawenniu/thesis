@@ -54,38 +54,21 @@
 %\signatureofdeclaration{signature.pdf} % 用于添加扫描版签字后的原创新声明（使用时取消注释本行，并注释掉上一行）
 % 中文摘要
 \begin{chineseabstract}
-<<<<<<< HEAD
-    数据的爆炸式增长既要求研究人员致力于节约存储容量的研究，也要求人们投入更多的精力关注敏感数据的安全存储当中。密文去重技术是解决这两个方面问题的重要方法。
-=======
     数据的爆炸式增长既要求研究人员致力于节约存储容量的研究，也要求人们投入更多的精力关注敏感数据的安全存储当中。此外，以往的工作鲜有在密文去重系统中引入高效的、具备推荐功能的密文关键词检索技术。不仅如此，现有的密文去重系统大多只针对一服务端多客户端的模型进行设计，并不能适配在当前流行的、具有去中心化和容灾功能的云服务器-边缘服务器协同架构上。所以，本论文阐述了一个兼容密文关键词检索的、适配云边协同架构的、高效且安全的密文去重系统。具体贡献如下：
->>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
     首先，对\acrshort{CAONT}技术进行改造并提出了兼容密钥更新的安全高效密文去重方法，其中有两种数据加密方式：基础加密方案和增强加密方案。基础加密方案的安全性相对薄弱但是加密效率更好，增强加密方案安全性相对增强但是加密效率稍低。此外，融合属性基加密和密钥回归两种现有的密码学原语而达到安全高效的密钥更新的目标。
 
     其次，本系统没有采用现有的密文关键词检索技术而设计一种支持密态关联分析和推荐的关键词检索方式。在服务上以关联值明文存储的方式虽然透露了部分敏感信息，但是服务器目前无法从这些敏感信息恢复出任何有价值的信息。这种明文存储关联值能够运行服务器动态更新关联信息，启发式地影响后来用户的检索行为。
 
-<<<<<<< HEAD
-    最后，本文不仅详细地阐述整个系统的底层设计和实现，还用大量的实验证实了本系统的存储开销低、上传和下载速度快以及响应检索时间短的优势。
-=======
     再者，本论文详细讲述了系统底层精巧设计：密文去重系统对云边协同架构的微调和适配，即云服务器进行数据块级去重而边缘服务器进行文件级去重；密文关键词技术对密文去重系统的适配和云边协同架构的适配，即建立密文文件和密文关键词的对应关系并由云服务器收集所有边缘服务器的关联信息。
 
     最后，本论文用大量的实验证实了本系统的存储开销低、上传和下载速度快以及响应检索时间短的优势。
->>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
     \chinesekeyword{密文去重，关键词检索，云边协同} % 中文关键词
 \end{chineseabstract}
 % 英文摘要
 \begin{englishabstract}
 
-<<<<<<< HEAD
-    The explosion of data requires both researchers to focus on conserving storage capacity and more attention to the secure storage of sensitive data. Encrypted deduplication technology is an important way to solve the two problems.
-
-    Firstly, the CAONT technology is modified and a secure and efficient ciphertext deduplication method compatible with key update is proposed, in which there are two data encryption methods: basic encryption scheme and enhanced encryption scheme. The security of the basic encryption scheme is relatively weak but the encryption efficiency is better, and the security of the enhanced encryption scheme is relatively enhanced but the encryption efficiency is slightly lower. In addition, the goal of secure and efficient key update is achieved by fusing two existing cryptographic primitives, attribute-based encryption and key regression.
-
-    Secondly, this system does not use the existing ciphertext keyword search technology to design a keyword search method that supports secret association analysis and recommendation. Although some sensitive information is disclosed by storing the associated values in clear text on the server, the server cannot recover any valuable information from these sensitive information at present. This plaintext of correlation value can run the server to dynamically update the correlation information, heuristically influencing the retrieval behavior of subsequent users.
-
-    Finally, this thesis not only elaborates on the underlying design and implementation of the entire system, but also uses a large number of experiments to confirm the advantages of low storage overhead, fast upload and download speed, and short response retrieval time of this system.
-=======
     The explosion of data requires both researchers to focus on conserving storage capacity and more attention to the secure storage of sensitive data. In addition, the previous works rarely introduce efficient and recommended ciphertext keyword retrieval technology into the ciphertext deduplication system. Not only that, most of the existing ciphertext deduplication systems are only designed for the model of one server and multiple clients, and cannot be adapted to the current popular cloud server-edge server collaborative architecture with decentralization and disaster recovery. Therefore, this thesis describes an efficient and secure ciphertext deduplication system that is compatible with ciphertext keyword retrieval and adapts to the cloud-edge collaborative architecture. The specific contributions are as follows:
 
     Firstly, the CAONT technology is modified and a secure and efficient ciphertext deduplication method compatible with key update is proposed, in which there are two data encryption methods: basic encryption scheme and enhanced encryption scheme. The security of the basic encryption scheme is relatively weak but the encryption efficiency is better, and the security of the enhanced encryption scheme is relatively enhanced but the encryption efficiency is slightly lower. In addition, the goal of secure and efficient key update is achieved by fusing two existing cryptographic primitives, attribute-based encryption and key regression.
@@ -95,7 +78,6 @@
     Thirdly, this thesis describes in detail the exquisite design of the bottom layer of the system: the fine-tuning and adaptation of the ciphertext deduplication system to the cloud-edge collaborative architecture, that is, the cloud server performs data block-level deduplication and the edge server performs file-level deduplication; the ciphertext keyword search technology's adaptation to the ciphertext deduplication system and the cloud-edge collaborative architecture, that is, to establish the corresponding relationship between ciphertext files and ciphertext keywords, and the cloud server collects the association information of all edge servers.
 
     Finally, this thesis uses a large number of experiments to confirm the advantages of low storage overhead, fast upload and download speed, and short response retrieval time of this system.
->>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
 
 
     \englishkeyword{Encrypted deduplication, Keyword search, Cloud-Edge collaboration} % 英文关键词
@@ -133,29 +115,6 @@
         \label{2022年十大数据泄漏事件}
         \begin{tabular}{|c|c|}
             \hline
-<<<<<<< HEAD
-            \textbf{公司名称}             & \textbf{波及人数（万人）} \\
-            \hline
-            Cash App Investing            & 820                       \\
-            \hline
-            Beetle Eye                    & 700                       \\
-            \hline
-            FlexBooker                    & 375                       \\
-            \hline
-            Elephant Insurance Services   & 276                       \\
-            \hline
-            Lakeview Loan Servicing       & 257                       \\
-            \hline
-            Horizon Actuarial Services    & 229                       \\
-            \hline
-            Shields Health Care Group     & 200                       \\
-            \hline
-            Texas Department of Insurance & 180                       \\
-            \hline
-            Flagstar Bank                 & 154                       \\
-            \hline
-            Baptist Medical Center        & 124                       \\
-=======
             \textbf{公司名称}                 & \textbf{波及人数（万人）} \\
             \hline
             Cash App Investing            & 820               \\
@@ -177,7 +136,6 @@
             Flagstar Bank                 & 154               \\
             \hline
             Baptist Medical Center        & 124               \\
->>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
             \hline
         \end{tabular}
     \end{center}
@@ -1115,26 +1073,6 @@ VM数据集的去重前后变化趋势见图\ref{存储开销3}。图\ref{存储
         \label{使用不同去重方法的物理数据和存根大小对比}
         \begin{tabular}{|c|c|c|c|}
             \hline
-<<<<<<< HEAD
-            \multicolumn{2}{|c|}{\textbf{数据}}     & \textbf{基于数据块} & \textbf{基于数据片段}                   \\
-            \hline\hline
-            \multirow{2}{*}{FSL}                    & 修剪包              & 665.4GB                       & 899.2GB \\
-
-            \cline{2-4}
-                                                    & 存根                & \multicolumn{2}{|c|}{386.4GB}           \\
-            % \cline{2-4}
-            % & 关联信息 &  \multicolumn{2}{|c|}{20.2GB}\\
-            \hline
-            \multicolumn{2}{|c|}{\textbf{存储节约}} & 98.2\%              & 97.8\%                                  \\
-            \hline\hline
-            \multirow{2}{*}{VM}                     & 修剪包              & 395.0GB                       & 453.9GB \\
-            \cline{2-4} %表示画一条2列-4列的横线
-                                                    & 存根                & \multicolumn{2}{|c|}{461.3GB}           \\
-            % \cline{2-4}
-            % & 关联信息 &  \multicolumn{2}{|c|}{8.5GB}\\
-            \hline
-            \multicolumn{2}{|c|}{\textbf{存储节约}} & 97.1\%              & 96.9\%                                  \\
-=======
             \multicolumn{2}{|c|}{\textbf{数据}}   & \textbf{基于数据块} & \textbf{基于数据片段}                         \\
             \hline\hline
             \multirow{2}{*}{FSL}                & 修剪包            & 665.4GB                       & 899.2GB \\
@@ -1153,7 +1091,6 @@ VM数据集的去重前后变化趋势见图\ref{存储开销3}。图\ref{存储
             % & 关联信息 &  \multicolumn{2}{|c|}{8.5GB}\\
             \hline
             \multicolumn{2}{|c|}{\textbf{存储节约}} & 97.1\%         & 96.9\%                                  \\
->>>>>>> 24a21b58dbce1d2b21ad568f77f4c541727aee8d
             \hline
         \end{tabular}
     \end{center}
