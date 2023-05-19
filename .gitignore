@@ -4,6 +4,7 @@ sub_modules/
 main.synctex(busy)
 bf.pdf
 *.tmp
+main.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
